@@ -1,0 +1,21 @@
+{% extends 'todo/base.html' %}
+
+
+{% block content %}
+<div class="box-content">
+<form class="box" method="POST" autocomplete="off">
+    {% csrf_token %}
+    <div class="registration">
+        <div>{{form.username}}</div>
+        <div>{{form.password}}</div>
+    </div>
+    <div class="validation">
+        <input class="btn danger" type="submit" value="Login">
+        <a class="btn info" href="{% url 'todo:register' %}">Register</a>
+    </div>
+</form>
+
+</div>
+
+
+{% endblock content %}

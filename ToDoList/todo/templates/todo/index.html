@@ -1,0 +1,20 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="hero-banner">
+     <h1 class="animated-text animated-text-typing" speed="100">TO_DO_LIST</h1>
+    <p class="animated-text animated-text-typing" speed="50" delay="800">
+      Forget Nothing Anymore.
+    </p>
+</div>
+<br><br>
+<a class="start-btn" href="{% url 'todo:tasklist' %}">Start</a>
+
+
+
+
+
+
+
+{% endblock content %}

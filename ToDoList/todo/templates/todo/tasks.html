@@ -1,0 +1,47 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="box-content">
+
+    <form class="add-task box" method="post">
+        <input class="task-content input" type="text" name="task" placeholder="New task...">
+
+
+        <select id="category" name="category" class="input box">
+            <option value="none">None</option>
+            <option value="family">Family</option>
+            <option value="sport">Sport</option>
+            <option value="business">Business</option>
+            <option value="private">Shopping</option>
+            <option value="other">Other</option>
+
+        </select>
+        <i class="priority fa-solid fa-star"><input type="checkbox" class="btn" id="check" checked/></i>
+        <input class="add" type="submit" value="Add Task">
+    </form>
+
+
+    <div class="tasks-added box">
+        <div class="filters-box">Filter nav bar</div>
+        <div class="hr"></div>
+        <div class="tasks">
+            {% for task in tasks %}
+            <div class="task">
+                <div class="task-content input">{{task.content}} <i class="fa-solid fa-pen"></i>
+                </div>
+                <div class="date">{{task.date}}</div>
+                <div class="delete-button">Delete</div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+    <div class="delete-button all">Delete All</div>
+
+</div>
+
+{% endblock content %}

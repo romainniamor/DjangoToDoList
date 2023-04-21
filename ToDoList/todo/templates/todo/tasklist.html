@@ -1,0 +1,60 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="box-content">
+    <div class="box">
+        <a class="add-btn" href="{% url 'todo:task_create' %}"><i class="fa-solid fa-plus"></i> New Task</a>
+    </div>
+
+    <div class="tasks-list">
+        <div class="filter-box">
+            <form method="GET">
+                <select class="filter-category" name="category_filter">
+                    <option value="">All Categories</option>
+                    {% for category in categories %}
+                    <option value="{{ category.id }}">{{ category.nom }}</option>
+                    {% endfor %}
+                </select>
+                <input class="btn info" type="submit" value="Filter">
+            </form>
+            <br>
+        </div>
+        <div class="hr"></div>
+
+        <div class="tasks">
+            {% for task in tasks %}
+
+            {% if task.complete %}
+
+            <div class="task complete">
+                <a class="task-content input" href="{% url 'todo:task_update' task.id %}">
+                    <p class="task-title">{{task.title}}</p><i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <div class="date">{{task.date}}</div>
+                <a class="btn danger" href="{% url 'todo:task_delete' task.id %}">Delete</a>
+            </div>
+
+            {% else %}
+            <div class="task">
+                <a class="task-content input" href="{% url 'todo:task_update' task.id %}">
+                    <p class="task-title">{{task.title}}</p><i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <div class="date">{{task.date}}</div>
+                <a class="btn danger" href="{% url 'todo:task_delete' task.id %}">Delete</a>
+            </div>
+
+            {% endif %}
+
+            {% empty %}
+                <p class="empty-task">Empty List</p>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock content %}

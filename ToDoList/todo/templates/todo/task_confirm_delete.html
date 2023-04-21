@@ -1,0 +1,29 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="box-content">
+    <div class="box">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="delete-box">
+                    <p class="input"> Are you sure you want to delete {{ task.title|slice:":10" }}{% if task.title|length > 10 %}...{% endif %}?</p>
+                    <div class="btns">
+                        <input class="btn danger" type="submit" value="Confirm">
+                    <a class="btn info" href="{% url 'todo:tasklist' %}">Back</a>
+                    </div>
+                </div>
+
+            </form>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock content %}

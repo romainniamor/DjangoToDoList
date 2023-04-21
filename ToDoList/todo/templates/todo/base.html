@@ -1,0 +1,51 @@
+{% load static %}
+<link href="{% static 'app2/css/app2.css' %}" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>todo</title>
+    <!-- IMPORT  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'todo/css/style.css' %}" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <nav>
+         {% if request.user.is_authenticated %}
+    <p class="account">Connected to {{request.user|title}}'s Account</p>
+    <a href="{% url 'todo:logout' %}">Logout</a>
+{% else %}
+    <a href="{% url 'todo:login' %}">Login</a>
+{% endif %}
+    </nav>
+    <div class="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <footer>
+        <div class="links">
+            <span class="copyright">Tous droits réservés © To_Do_2023</span>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Termes et condition</a>
+
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+<script src="{% static 'todo/js/script.js' %}"></script>
+</body>
+
+
+
+
+</html>

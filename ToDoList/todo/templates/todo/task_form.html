@@ -1,0 +1,28 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+
+<div class="box-content">
+ <form class="box" method="POST" action="">
+    {% csrf_token %}
+
+    <div class="first-row">
+        {{form.title}}
+        <label for="{{ form.priority.id_for_label  }}">
+        {{form.priority}}
+        <i class="fas fa-star"></i>
+        </label>
+        {{form.category}} </div>
+     {{form.content}}
+     <label for="{{ form.complete.id_for_label  }}"><div class="done">{{form.complete.label}}{{form.complete}}</div></label>
+    <input class="btn info" type="submit" value="Confirm">
+</form>
+
+</div>
+
+
+
+
+
+{% endblock content %}
