@@ -24,6 +24,8 @@ Python, Django, PostgreSql, Html, JavaScript, Scss...
 
 ![App Screenshot](https://raw.githubusercontent.com/romainniamor/DjangoToDoList/master/ToDoList/todo/screenshots/screen7.png)
 
+![App Screenshot](https://raw.githubusercontent.com/romainniamor/DjangoToDoList/master/ToDoList/todo/screenshots/screen8.png)
+
 
 
 
