@@ -46,15 +46,19 @@ $danger: #f44336;
         background: $dark;
        }
 
-.checked {
-     background-color: $danger;
-}
+
 
 .fas.fa-star {
     cursor: pointer;
-    .checked {
-        color: $darker;
-    }
+}
+
+.fas.fa-star.checked {
+    color: $darker;
+}
+
+.done.checked {
+
+     background: $danger;
 }
 
 

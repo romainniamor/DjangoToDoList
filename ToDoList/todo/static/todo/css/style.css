@@ -37,16 +37,16 @@
   background: #28282B;
 }
 
-.checked {
-  background-color: #f44336;
-}
-
 .fas.fa-star {
   cursor: pointer;
 }
 
-.fas.fa-star .checked {
+.fas.fa-star.checked {
   color: #090909;
+}
+
+.done.checked {
+  background: #f44336;
 }
 
 .priorityCheckbox {
