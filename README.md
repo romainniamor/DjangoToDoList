@@ -10,6 +10,8 @@ Python, Django, PostgreSql, Html, JavaScript, Scss...
 
 ## Screenshots
 
+![App Screenshot](https://raw.githubusercontent.com/romainniamor/DjangoToDoList/master/ToDoList/todo/screenshots/screen8.png)
+
 ![App Screenshot](https://raw.githubusercontent.com/romainniamor/DjangoToDoList/master/ToDoList/todo/screenshots/screen1.png)
 
 ![App Screenshot](https://raw.githubusercontent.com/romainniamor/DjangoToDoList/master/ToDoList/todo/screenshots/screen2.png)
@@ -24,7 +26,7 @@ Python, Django, PostgreSql, Html, JavaScript, Scss...
 
 ![App Screenshot](https://raw.githubusercontent.com/romainniamor/DjangoToDoList/master/ToDoList/todo/screenshots/screen7.png)
 
-![App Screenshot](https://raw.githubusercontent.com/romainniamor/DjangoToDoList/master/ToDoList/todo/screenshots/screen8.png)
+
 
 
 
