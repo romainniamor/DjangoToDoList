@@ -1,14 +1,13 @@
 
 # To Do List
 
-To Do List with easy authentification, selection, filter by category and priority.
-
+To Do List with easy authentification, admin interface, create, edit, delete your data, filtering stuff by category (work, private ... ), date and priority.
 
 ## 🛠 Skills
 Python, Django, PostgreSql, Html, JavaScript, Scss...
 
 
-## Screenshots
+## 📷 Screenshots
 
 ![App Screenshot](https://raw.githubusercontent.com/romainniamor/DjangoToDoList/master/ToDoList/todo/screenshots/screen8.png)
 
